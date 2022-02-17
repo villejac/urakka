@@ -33,7 +33,7 @@ app.get('/api/ilmajoki', (req, res)=> {
     var dbo = db.db("db");
     dbo.collection("ilmajoki").find({}).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        //console.log(result);
         res.send(result);
         //res.status(200).end();
         db.close();
@@ -49,7 +49,7 @@ app.get('/api/seinajoki', (req, res)=> {
     var dbo = db.db("db");
     dbo.collection("seinajoki").find({}).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        //console.log(result);
         res.send(result);
         //res.status(200).end();
         db.close();
@@ -65,7 +65,7 @@ app.get('/api/parkano', (req, res)=> {
     var dbo = db.db("db");
     dbo.collection("parkano").find({}).toArray(function(err, result) {
         if (err) throw err;
-        console.log(result);
+        //console.log(result);
         res.send(result);
         //res.status(200).end();
         db.close();
@@ -75,7 +75,7 @@ app.get('/api/parkano', (req, res)=> {
 
 // this * route is to serve project on different page routes except root `/`
 app.get(/.*/, function (req, res) {
-res.sendFile(path.join(__dirname, '/public/index.html'))
+res.sendFile(path.join(__dirname, '/dist/index.html'))
 })
 
 const port = process.env.PORT || 8080
