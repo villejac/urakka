@@ -7,22 +7,6 @@ const app = express()
 
 //here we are configuring dist to serve app files
 app.use('/', serveStatic(path.join(__dirname, '/dist')))
-module.exports = {
-    devServer: {
-        proxy: {
-            '/api/parkano': {
-                target: 'http://localhost:8080/'
-            },
-            '/api/seinajoki': {
-                target: 'http://localhost:8080/'
-            },
-            '/api/ilmajoki': {
-                target: 'http://localhost:8080/'
-            }
-
-        }
-    }
-};
 
 const cors=require("cors");
 const corsOptions ={
