@@ -109,9 +109,9 @@
 
 <script>
  // apin nouto
-let url = 'http://localhost:8080/api/ilmajoki';
-let url2 = 'http://localhost:8080/api/seinajoki';
-let url3 = 'http://localhost:8080/api/parkano';
+let url = 'https://urakka-api.herokuapp.com/api/ilmajoki';
+let url2 = 'https://urakka-api.herokuapp.com/api/seinajoki';
+let url3 = 'https://urakka-api.herokuapp.com/api/parkano';
 export default {
     name: 'Main-block',
     data() {
